@@ -8,7 +8,6 @@ import { getStudent, getStudentById, postStudent, deleteStudentById, patchStuden
 const app = express();
 
 
-
 app.use(cors());
 app.use(express.json());
 
@@ -24,8 +23,7 @@ app.delete("/students/:id", deleteStudentById)
 
 app.patch("/students/name/:id", patchStudentById);
 
-
-const PORT = process.env.PORT||5003;
+const PORT = process.env.PORT|| 5003;
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 });
